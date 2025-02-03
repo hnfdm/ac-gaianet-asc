@@ -30,6 +30,17 @@ menaikkan throughput/interaksi dengan cepat dan efisien.
    ```bash
    node autochat.js
    ```
+### Lightweight Model
+
+1. Qwen 2
+   ```bash
+   gaianet init --config https://raw.githubusercontent.com/GaiaNet-AI/node-configs/main/qwen2-0.5b-instruct/config.json
+   ```
+   
+2. Stablelm 2
+   ```bash
+   gaianet init --config https://raw.githubusercontent.com/GaiaNet-AI/node-configs/main/stablelm-2-zephyr-1.6b/config.json
+   ```
 
 ### Acknowledgements
 - Inspired by [Node Army](https://github.com/sipalingnode) & [stewartid](https://github.com/dicoderin).
