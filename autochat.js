@@ -1,18 +1,18 @@
 const axios = require("axios");
 const fs = require('fs');
 
-// Konfigurasi
 const API_TIMEOUT = 15000;
 const RETRY_DELAY = 5000;
 const MAX_RETRIES = 3;
-const MIN_DELAY = 2000;  // Delay minimum 2 detik
-const MAX_DELAY = 5000;  // Delay maksimum 5 detik
+const MIN_DELAY = 2000;  
+const MAX_DELAY = 5000;  
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 ;(async () => {
     try {
-        console.log('AUTOCHAT GAIANET BY AIRDROP ASC\n\n');
+        console.log('\n\n');
+        console.log('Auto Chat Gaianet by Airdrop ASC\n\n');
         const addressList = fs.readFileSync('chat.txt', 'utf-8');
         const addressListArray = addressList.split('\n').filter(line => line.trim() !== '');
         
@@ -26,7 +26,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
             while (retryCount < MAX_RETRIES && !success) {
                 try {
                     const response = await axios.post(
-                        'https://0x7f3fb66150ebefe49bbd8f4fa3dc5740f27517de.gaia.domains/v1/chat/completions',
+                        'https://<NODE_ID>.gaia.domains/v1/chat/completions',
                         {
                             messages: [
                                 { role: 'system', content: 'You are a helpful assistant.' },
