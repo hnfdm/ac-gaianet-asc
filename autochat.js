@@ -9,6 +9,16 @@ const MAX_DELAY = 5000;
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+// Konfigurasi Proxy
+const proxy = {
+    host: 'your-proxy-host',  
+    port: 8080,  
+    auth: {
+        username: 'your-username',  
+        password: 'your-password'  
+    }
+};
+
 ;(async () => {
     try {
         console.log('\n\n');
@@ -18,8 +28,8 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
         
         for (let index = 11; index < addressListArray.length; index++) {
             const Wallet = addressListArray[index].trim();
-            console.log(`Processing [${index + 1}/${addressListArray.length}]: ${Wallet}`);
-            
+            console.log(`Processing [${index + 1}/${addressListArray.length}] via proxy: ${Wallet}`);
+
             let retryCount = 0;
             let success = false;
 
@@ -35,7 +45,8 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
                         },
                         {
                             headers: { 'accept': 'application/json', 'Content-Type': 'application/json' },
-                            timeout: API_TIMEOUT
+                            timeout: API_TIMEOUT,
+                            proxy: proxy
                         }
                     );
 
@@ -46,7 +57,7 @@ const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
                         console.error("Invalid response structure:", response.data);
                         fs.appendFileSync('failed.txt', `${Wallet}|INVALID_RESPONSE\n`);
                     }
-                    
+
                     success = true;
 
                 } catch (error) {
