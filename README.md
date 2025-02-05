@@ -43,7 +43,7 @@ menaikkan throughput/interaksi dengan cepat dan efisien.
    ```
 
 ### How to Install Node?
-- [Medium](https://medium.com/@amirsohail208/how-to-install-gaianet-node-without-getting-stuck-52a8d1b899ee)
+- Read [Medium Page](https://medium.com/@amirsohail208/how-to-install-gaianet-node-without-getting-stuck-52a8d1b899ee)
 
 ### Acknowledgements
 - Inspired by [Node Army](https://github.com/sipalingnode) & [stewartid](https://github.com/dicoderin).
