@@ -42,5 +42,8 @@ menaikkan throughput/interaksi dengan cepat dan efisien.
    gaianet init --config https://raw.githubusercontent.com/GaiaNet-AI/node-configs/main/stablelm-2-zephyr-1.6b/config.json
    ```
 
+### How to Install Node?
+- [Medium](https://medium.com/@amirsohail208/how-to-install-gaianet-node-without-getting-stuck-52a8d1b899ee)
+
 ### Acknowledgements
 - Inspired by [Node Army](https://github.com/sipalingnode) & [stewartid](https://github.com/dicoderin).
