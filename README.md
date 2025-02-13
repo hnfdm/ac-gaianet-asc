@@ -22,6 +22,7 @@ menaikkan throughput/interaksi dengan cepat dan efisien.
    ```
    
 4. Ganti `<NODE_ID>` dengan Node ID kalian di file `autochat.js`.
+5. Ganti `NODE_ID` dengan Node ID kalian di file `multi.js`.
 
 ### Cara Penggunaan
 
@@ -29,6 +30,12 @@ menaikkan throughput/interaksi dengan cepat dan efisien.
    
    ```bash
    node autochat.js
+   ```
+
+2. Jalankan bot (multi node) dengan perintah berikut:
+   
+   ```bash
+   node multi.js
    ```
 ### Lightweight Model
 
